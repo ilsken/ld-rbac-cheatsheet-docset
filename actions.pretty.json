@@ -1,0 +1,474 @@
+[
+  {
+    "description": "<code>member</code> is a top-level action. A code sample is below:\n\n```\nmember/*\n```\n\nTo learn more, read <a href=\"/docs/teams\" ui-sref=\"docs.show({'doc': 'teams'})\" class=\"doc-link\" data-sidebar=\"teams\">Managing teams</a>.",
+    "title": "Members actions",
+    "short": "member",
+    "commands": [
+      {
+        "action": "createMember",
+        "description": "Add a new team member to an account"
+      },
+      {
+        "action": "updateRole",
+        "description": "Update a team member's built-in roles (reader, writer, or admin)"
+      },
+      {
+        "action": "updateCustomRole",
+        "description": "Update a team member's custom roles"
+      },
+      {
+        "action": "deleteMember",
+        "description": "Remove a team member from an account"
+      },
+      {
+        "action": "sendMfaRequest",
+        "description": "Send a team member a request to enable MFA"
+      },
+      {
+        "action": "sendMfaRecoveryCode",
+        "description": "Send a team member their MFA recovery code"
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>token</code> is a child resources of <strong>members</strong>. A code sample is below:\n\n```\nmember/*:token/*\n```\n\nTo learn more, read <a href=\"/docs/api-access-tokens\" ui-sref=\"docs.show({'doc': 'api-access-tokens'})\" class=\"doc-link\" data-sidebar=\"api-access-tokens\">Personal API access tokens</a>.",
+    "title": "Tokens actions",
+    "short": "token",
+    "commands": [
+      {
+        "action": "createAccessToken",
+        "description": "Create a personal access token"
+      },
+      {
+        "action": "updateAccessTokenPolicy",
+        "description": "Change the policy filter of a personal access token"
+      },
+      {
+        "action": "updateAccessTokenName",
+        "description": "Change the name of a personal access token"
+      },
+      {
+        "action": "updateAccessTokenDescription",
+        "description": "Change the description of a personal access token"
+      },
+      {
+        "action": "deleteAccessToken",
+        "description": "Delete a personal access token"
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>role</code> is a <strong>top-level resource</strong>. A code sample is below:\n\n```\nrole/*\n```\n\nTo learn more, read <a href=\"/docs/custom-roles\" ui-sref=\"docs.show({'doc': 'custom-roles'})\" class=\"doc-link\" data-sidebar=\"custom-roles\">Custom roles</a>.",
+    "title": "Role actions",
+    "short": "role",
+    "commands": [
+      {
+        "action": "createRole",
+        "description": "Create new custom roles"
+      },
+      {
+        "action": "updatePolicy",
+        "description": "Update a custom role's policy"
+      },
+      {
+        "action": "updateName",
+        "description": "Update a custom role's name"
+      },
+      {
+        "action": "deleteRole",
+        "description": "Delete a custom role"
+      },
+      {
+        "action": "updateMembers",
+        "description": "Add or remove users from a custom role (equivalent to updateCustomRole on team members)."
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>proj</code> is a <strong>top-level resource</strong>. \n\n```\nproj/*\n```\n\nTo learn more, read <a href=\"/docs/projects\" ui-sref=\"docs.show({'doc': 'projects'})\" class=\"doc-link\" data-sidebar=\"projects\">Projects</a>.",
+    "title": "Project actions",
+    "short": "proj",
+    "commands": [
+      {
+        "action": "createProject",
+        "description": "Create a new project"
+      },
+      {
+        "action": "deleteProject",
+        "description": "Delete a project"
+      },
+      {
+        "action": "updateProjectName",
+        "description": "Rename a project"
+      },
+      {
+        "action": "updateIncludeInSnippetByDefault",
+        "description": "Make new flags available to the client-side (JavaScript) SDK by default"
+      },
+      {
+        "action": "updateTags",
+        "description": "Update tags associated with a project"
+      },
+      {
+        "action": "viewProject",
+        "description": "View a project. If set to deny, anyone impacted by this policy can neither view nor modify a project.\nTo learn more, read Configuring private projects with custom roles."
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>env</code> is a child resources of <strong>projects</strong>. A code sample is below:\n\n```\nproj/*:env/*\n```\n\nTo learn more, read <a href=\"/docs/environments\" ui-sref=\"docs.show({'doc': 'environments'})\" class=\"doc-link\" data-sidebar=\"environments\">Environments</a>.",
+    "title": "Environments actions",
+    "short": "env",
+    "commands": [
+      {
+        "action": "createEnvironment",
+        "description": "Create new environments"
+      },
+      {
+        "action": "deleteEnvironment",
+        "description": "Delete an existing environment"
+      },
+      {
+        "action": "updateName",
+        "description": "Change the name of an environment"
+      },
+      {
+        "action": "updateColor",
+        "description": "Change the color swatch for an environment"
+      },
+      {
+        "action": "updateTtl",
+        "description": "Change the TTL for an environment"
+      },
+      {
+        "action": "updateApiKey",
+        "description": "Reset the API key for an environment"
+      },
+      {
+        "action": "updateMobileKey",
+        "description": "Reset the mobile key for an environment"
+      },
+      {
+        "action": "updateSecureMode",
+        "description": "Turn secure mode on or off for an environment"
+      },
+      {
+        "action": "updateTags",
+        "description": "Update tags associated with an environment"
+      },
+      {
+        "action": "updateRequireComments",
+        "description": "Require comments for changes to flags and segments"
+      },
+      {
+        "action": "updateConfirmChanges",
+        "description": "Require environment confirmation for changes to flags and segments"
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>metric</code> is a child resource of <strong>projects</strong>. A code sample is below:\n\n```\nproj/*:metric/*\n```\n\nTo learn more, read <a href=\"/docs/experimentation\" ui-sref=\"docs.show({'doc': 'experimentation'})\" class=\"doc-link\" data-sidebar=\"experimentation\">Experimentation introduction</a>.",
+    "title": "Metrics actions",
+    "short": "metric",
+    "commands": [
+      {
+        "action": "createMetric",
+        "description": "Create metrics"
+      },
+      {
+        "action": "deleteMetric",
+        "description": "Delete metrics"
+      },
+      {
+        "action": "updateKey",
+        "description": "Update keys for custom metrics"
+      },
+      {
+        "action": "updateName",
+        "description": "Update metrics names"
+      },
+      {
+        "action": "updateDescription",
+        "description": "Update metrics descriptions"
+      },
+      {
+        "action": "updateUrls",
+        "description": "Update the URLs for a click or page view metric"
+      },
+      {
+        "action": "updateSelector",
+        "description": "Update the CSS selector for a click metric"
+      },
+      {
+        "action": "updateOptimizelyMetrics",
+        "description": "Update Optimizely metrics"
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>flag</code> is a child of <strong>both a project and environments</strong>. A code sample is below:\n\n```\nproj/*:env/*:flag/*\n```\n\nTo learn more, read <a href=\"/docs/creating-a-feature-flag\" ui-sref=\"docs.show({'doc': 'creating-a-feature-flag'})\" class=\"doc-link\" data-sidebar=\"creating-a-feature-flag\">Creating a feature flag</a>.",
+    "title": "Feature flags actions",
+    "short": "flag",
+    "commands": [
+      {
+        "action": "createFlag",
+        "description": "Create a feature flag. Creating a feature flag impacts all environments in a project, so users will need permission to create flags in all environments."
+      },
+      {
+        "action": "cloneFlag",
+        "description": "Create a new flag with settings based on an existing flag. To clone a flag, you need to have the cloneFlag permission on the source flag, as well as the createFlag permission for the new flag"
+      },
+      {
+        "action": "deleteFlag",
+        "description": "Delete a feature. Deleting a feature impacts all environments in a project, so users will need permission to delete features in all environments."
+      },
+      {
+        "action": "updateOn",
+        "description": "Trigger the kill switch for a feature"
+      },
+      {
+        "action": "updateIncludeInSnippet",
+        "description": "Change whether the feature flag is available to front-end code via the JavaScript SDK . Impacts all environments in a project."
+      },
+      {
+        "action": "updateName",
+        "description": "Change the name of a feature flag. Impacts all environments in a project."
+      },
+      {
+        "action": "updateDescription",
+        "description": "Change the description of a feature flag. Impacts all environments in a project."
+      },
+      {
+        "action": "updateTemporary",
+        "description": "Marks a flag temporary or permanent. Impacts all environments in a project."
+      },
+      {
+        "action": "updateTags",
+        "description": "Update tags associated with a flag. Impacts all environments in a project."
+      },
+      {
+        "action": "updatePrerequisites",
+        "description": "Update flag prerequisites."
+      },
+      {
+        "action": "updateTargets",
+        "description": "Update individual user targeting."
+      },
+      {
+        "action": "updateRules",
+        "description": "Update custom targeting rules."
+      },
+      {
+        "action": "updateFallthrough",
+        "description": "Update the \"default\" or \"fallthrough\" rule."
+      },
+      {
+        "action": "updateFlagVariations",
+        "description": "Change the flag's variations. Impacts all environments."
+      },
+      {
+        "action": "updateOffVariation",
+        "description": "Update the variation returned when the kill switch is set to off."
+      },
+      {
+        "action": "updateMaintainer",
+        "description": "Update the flag maintainer. Impacts all environments."
+      },
+      {
+        "action": "updateAttachedMetrics",
+        "description": "Update metrics connected to a flag (start or pause an experiment)."
+      },
+      {
+        "action": "updateFlagCustomProperties",
+        "description": "Update custom properties attached to a flag. Impacts all environments."
+      },
+      {
+        "action": "updateVariations",
+        "description": "Update percentage rollout variations"
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>segment</code> is a child of <strong>both a project and environments</strong>. A code sample is below:\n\n```\nproj/*:env/*:segment/*\n```\n\nTo learn more, read <a href=\"/docs/segmenting-users\" ui-sref=\"docs.show({'doc': 'segmenting-users'})\" class=\"doc-link\" data-sidebar=\"segmenting-users\">Building user segments</a>.",
+    "title": "Segments actions",
+    "short": "segment",
+    "commands": [
+      {
+        "action": "createSegment",
+        "description": "Create a segment."
+      },
+      {
+        "action": "deleteSegment",
+        "description": "Delete a segment"
+      },
+      {
+        "action": "updateName",
+        "description": "Update segment name."
+      },
+      {
+        "action": "updateDescription",
+        "description": "Update segment description."
+      },
+      {
+        "action": "updateTags",
+        "description": "Update tags associated with a segment."
+      },
+      {
+        "action": "updateIncluded",
+        "description": "Update the list of users explicitly included in a segment."
+      },
+      {
+        "action": "updateExcluded",
+        "description": "Update the list of users explicitly excluded from a segment."
+      },
+      {
+        "action": "updateRules",
+        "description": "Update the targeting rules for a segment."
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>webhook</code> is a <strong>top-level resource</strong>. A code sample is below:\n\n```\nwebhook/*\n```\n\nTo learn more, read <a href=\"/docs/webhooks\" ui-sref=\"docs.show({'doc': 'webhooks'})\" class=\"doc-link\" data-sidebar=\"webhooks\">Webhooks</a>.",
+    "title": "Webhooks actions",
+    "short": "webhook",
+    "commands": [
+      {
+        "action": "createWebhook",
+        "description": "Create a new webhook."
+      },
+      {
+        "action": "deleteWebhook",
+        "description": "Delete a webhook."
+      },
+      {
+        "action": "updateUrl",
+        "description": "Update the URL for a webhook."
+      },
+      {
+        "action": "updateSecret",
+        "description": "Update the webhook secret."
+      },
+      {
+        "action": "updateStatements",
+        "description": "Update the policy filter for a webhook."
+      },
+      {
+        "action": "updateOn",
+        "description": "Turn a webhook on or off."
+      },
+      {
+        "action": "updateName",
+        "description": "Change the name of a webhook"
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "Most third-party integrations (e.g. <a href=\"/docs/hipchat\" ui-sref=\"docs.show({'doc': 'hipchat'})\" class=\"doc-link\" data-sidebar=\"hipchat\">HipChat room notifications</a>) use a shared set of custom role actions.\n<code>integration</code> is a <strong>top-level resource</strong>. A code sample is below:\n\n```\nintegration/*\n```\n",
+    "title": "Integrations actions",
+    "short": "integration",
+    "commands": [
+      {
+        "action": "createIntegration",
+        "description": "Create a new third-party integration."
+      },
+      {
+        "action": "deleteIntegration",
+        "description": "Delete a third-party integration."
+      },
+      {
+        "action": "updateConfiguration",
+        "description": "Change the settings of a third-party integration."
+      },
+      {
+        "action": "updateOn",
+        "description": "Turn a third-party integration on or off."
+      },
+      {
+        "action": "updateName",
+        "description": "Change the name of a third-party integration."
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>destination</code> is a child of <strong>both a project and environments</strong>.\n\n```\nproj/*:env/*:destination/*\n```\n\nTo learn more, read <a href=\"/docs/data-export\" ui-sref=\"docs.show({'doc': 'data-export'})\" class=\"doc-link\" data-sidebar=\"data-export\">Data Export</a>.",
+    "title": "Destinations actions",
+    "short": "destination",
+    "commands": [
+      {
+        "action": "createDestination",
+        "description": "Create a new destination."
+      },
+      {
+        "action": "deleteDestination",
+        "description": "Delete a destination."
+      },
+      {
+        "action": "updateConfiguration",
+        "description": "Change the settings of a destination."
+      },
+      {
+        "action": "updateOn",
+        "description": "Turn a destination on or off."
+      },
+      {
+        "action": "updateName",
+        "description": "Change the name of a destination."
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>code-reference-repository</code> is a <strong>top-level resource</strong>. A code sample is below:\n\n```\ncode-reference-repository/*\n```\n\nTo learn more, read <a href=\"/docs/git-code-references\" ui-sref=\"docs.show({'doc': 'git-code-references'})\" class=\"doc-link\" data-sidebar=\"git-code-references\">Git code references</a>.",
+    "title": "Code references actions",
+    "short": "code-reference-repository",
+    "commands": [
+      {
+        "action": "createCodeRefsRepository",
+        "description": "Connect a Git repository."
+      },
+      {
+        "action": "updateCodeRefsRepositoryName",
+        "description": "Update a Git repository connection name."
+      },
+      {
+        "action": "updateCodeRefsRepositoryConfiguration",
+        "description": "Update a Git repository connection configuration."
+      },
+      {
+        "action": "updateCodeRefsRepositoryOn",
+        "description": "Flip the on/off status of a Git repository connection."
+      },
+      {
+        "action": "updateCodeRefsRepositoryBranches",
+        "description": "Update the stored branch data for a Git repository connection."
+      },
+      {
+        "action": "deleteCodeRefsRepository",
+        "description": "Delete a Git repository connection."
+      }
+    ],
+    "x": {}
+  },
+  {
+    "description": "<code>user</code> is a child of <strong>both a project and environments</strong>. A code sample is below:\n\n```\nproj/*:env/*:user/*\n```\n\nTo learn more, read <a href=\"/docs/the-user-dashboard\" ui-sref=\"docs.show({'doc': 'the-user-dashboard'})\" class=\"doc-link\" data-sidebar=\"the-user-dashboard\">The user dashboard</a>.",
+    "title": "Users actions",
+    "short": "user",
+    "commands": [
+      {
+        "action": "deleteUser",
+        "description": "Deletes a user"
+      }
+    ],
+    "x": {}
+  }
+]
