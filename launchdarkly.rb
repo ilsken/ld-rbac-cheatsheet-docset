@@ -56,7 +56,7 @@ cheatsheet do
       name 'Example: Deny access to flags in production environment'
       notes <<-'END'
       ```javascript
-      {
+      [{
         "effect": "deny",
         "resources": [
           "proj/*:env/production:flag/*"
@@ -64,7 +64,7 @@ cheatsheet do
         "actions": [
           "*"
         ]
-      }
+      }]
       ```
       END
     end
@@ -90,7 +90,7 @@ cheatsheet do
         {
           "notResources": ["proj/project"],
           "actions": ["viewProject"],
-          "effect": "allow"
+          "effect": "deny"
         }
       ]
       ```
