@@ -1,4 +1,5 @@
 /* in chrome dev tools @ https://docs.launchdarkly.com/docs/actions-in-custom-roles */
+/* this will copy some ruby code into your clipboard that you can pass to cheatset */
 x = Array.from(Array.from(document.getElementById("content-container").querySelectorAll("div.magic-block-parameters ~ div")).reduce((blocks, elem) => {
   blocks[blocks.length - 1].push(elem);
   if (elem.matches('div.magic-block-parameters')) {

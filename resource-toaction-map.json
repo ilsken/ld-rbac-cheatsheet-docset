@@ -1,0 +1,120 @@
+{
+  "member": [
+    "createMember",
+    "updateRole",
+    "updateCustomRole",
+    "deleteMember",
+    "sendMfaRequest",
+    "sendMfaRecoveryCode"
+  ],
+  "token": [
+    "createAccessToken",
+    "updateAccessTokenPolicy",
+    "updateAccessTokenName",
+    "updateAccessTokenDescription",
+    "deleteAccessToken"
+  ],
+  "role": [
+    "createRole",
+    "updatePolicy",
+    "updateName",
+    "deleteRole",
+    "updateMembers"
+  ],
+  "proj": [
+    "createProject",
+    "deleteProject",
+    "updateProjectName",
+    "updateIncludeInSnippetByDefault",
+    "updateTags",
+    "viewProject"
+  ],
+  "env": [
+    "createEnvironment",
+    "deleteEnvironment",
+    "updateName",
+    "updateColor",
+    "updateTtl",
+    "updateApiKey",
+    "updateMobileKey",
+    "updateSecureMode",
+    "updateTags",
+    "updateRequireComments",
+    "updateConfirmChanges"
+  ],
+  "metric": [
+    "createMetric",
+    "deleteMetric",
+    "updateKey",
+    "updateName",
+    "updateDescription",
+    "updateUrls",
+    "updateSelector",
+    "updateOptimizelyMetrics"
+  ],
+  "flag": [
+    "createFlag",
+    "cloneFlag",
+    "deleteFlag",
+    "updateOn",
+    "updateIncludeInSnippet",
+    "updateName",
+    "updateDescription",
+    "updateTemporary",
+    "updateTags",
+    "updatePrerequisites",
+    "updateTargets",
+    "updateRules",
+    "updateFallthrough",
+    "updateFlagVariations",
+    "updateOffVariation",
+    "updateMaintainer",
+    "updateAttachedMetrics",
+    "updateFlagCustomProperties",
+    "updateVariations"
+  ],
+  "segment": [
+    "createSegment",
+    "deleteSegment",
+    "updateName",
+    "updateDescription",
+    "updateTags",
+    "updateIncluded",
+    "updateExcluded",
+    "updateRules"
+  ],
+  "webhook": [
+    "createWebhook",
+    "deleteWebhook",
+    "updateUrl",
+    "updateSecret",
+    "updateStatements",
+    "updateOn",
+    "updateName"
+  ],
+  "integration": [
+    "createIntegration",
+    "deleteIntegration",
+    "updateConfiguration",
+    "updateOn",
+    "updateName"
+  ],
+  "destination": [
+    "createDestination",
+    "deleteDestination",
+    "updateConfiguration",
+    "updateOn",
+    "updateName"
+  ],
+  "code-reference-repository": [
+    "createCodeRefsRepository",
+    "updateCodeRefsRepositoryName",
+    "updateCodeRefsRepositoryConfiguration",
+    "updateCodeRefsRepositoryOn",
+    "updateCodeRefsRepositoryBranches",
+    "deleteCodeRefsRepository"
+  ],
+  "user": [
+    "deleteUser"
+  ]
+}

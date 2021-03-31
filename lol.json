@@ -1,0 +1,587 @@
+[
+  {
+    "name": "Account",
+    "path": "acct",
+    "actions": [
+      {
+        "updateOrganization": "Update the organization name."
+      },
+      {
+        "updateSubscription": "Change the pricing plan for the account."
+      },
+      {
+        "updateBillingContact": "Update the billing contact for the account."
+      },
+      {
+        "deleteSubscription": "Cancel the account plan."
+      },
+      {
+        "updatePaymentCard": "Change the credit card for the account."
+      },
+      {
+        "updateRequireMfa": "Change whether multi-factor authentication (MFA) is required for all users on the account."
+      },
+      {
+        "updateAccountToken": "Reset account tokens (for the{' '}\n        <a href=\"https://apidocs.launchdarkly.com/reference#authentication\">LaunchDarkly REST API</a>)."
+      },
+      {
+        "deleteAccountToken": "Delete account tokens (for the{' '}\n        <a href=\"https://apidocs.launchdarkly.com/reference#authentication\">LaunchDarkly REST API</a>)."
+      },
+      {
+        "createSamlConfig": "Create a new SAML configuration for the account."
+      },
+      {
+        "deleteSamlConfig": "Delete the SAML configuration for the account."
+      },
+      {
+        "updateSamlEnabled": "Enable or disable SAML SSO for the account."
+      },
+      {
+        "updateSamlX509Certificate": "Update the SAML X509 certificate for the account."
+      },
+      {
+        "updateSamlSsoUrl": "Update the SAML SSO URL for the account."
+      },
+      {
+        "updateSamlRequireSso": "Change whether SSO must be used for authentication."
+      },
+      {
+        "createScimConfig": "Create a new SCIM configuration for the account."
+      },
+      {
+        "deleteScimConfig": "Delete the SCIM configuration for the account."
+      },
+      {
+        "updateSessionDuration": "Change the duration of sessions."
+      },
+      {
+        "updateSessionRefresh": "Change whether sessions are refreshed automatically."
+      },
+      {
+        "revokeSessions": "Revoke sessions issued before a specified date."
+      }
+    ]
+  },
+  {
+    "name": "Members",
+    "path": "member/*",
+    "desc": "<code>member</code> is a top-level action.",
+    "actions": [
+      {
+        "createMember": "Add a new team member to an account."
+      },
+      {
+        "updateRole": "Update a team member's built-in roles (reader, writer, or admin)."
+      },
+      {
+        "updateCustomRole": "Update a team member's custom roles."
+      },
+      {
+        "deleteMember": "Remove a team member from an account."
+      },
+      {
+        "sendMfaRequest": "Send a team member a request to enable MFA."
+      },
+      {
+        "sendMfaRecoveryCode": "Send a team member their MFA recovery code."
+      }
+    ]
+  },
+  {
+    "name": "Personal access token",
+    "path": "member/*:token/*",
+    "desc": "<code>token</code> is a child resources of <strong>members</strong>.",
+    "actions": [
+      {
+        "createAccessToken": "Create a personal access token"
+      },
+      {
+        "updateAccessTokenPolicy": "Change the policy filter of a personal access token"
+      },
+      {
+        "updateAccessTokenName": "Change the name of a personal access token"
+      },
+      {
+        "updateAccessTokenDescription": "Change the description of a personal access token"
+      },
+      {
+        "deleteAccessToken": "Delete a personal access token"
+      },
+      {
+        "resetAccessToken": "Reset a personal access token's secret key"
+      }
+    ]
+  },
+  {
+    "name": "Service access token",
+    "path": "service-token/*",
+    "desc": "<code>service-token</code> is a <strong>top-level resource</strong>.",
+    "actions": [
+      {
+        "createAccessToken": "Create a service access token."
+      },
+      {
+        "updateAccessTokenName": "Change the name of a service access token."
+      },
+      {
+        "updateAccessTokenDescription": "Change the description of a service access token."
+      },
+      {
+        "deleteAccessToken": "Delete a service access token."
+      },
+      {
+        "resetAccessToken": "Reset a service access token's secret key."
+      }
+    ]
+  },
+  {
+    "name": "Role",
+    "path": "role/*",
+    "desc": "<code>role</code> is a <strong>top-level resource</strong>.",
+    "actions": [
+      {
+        "createRole": "Create new custom roles."
+      },
+      {
+        "updatePolicy": "Update a custom role's policy."
+      },
+      {
+        "updateName": "Update a custom role's name."
+      },
+      {
+        "updateDescription": "Update a custom role's description."
+      },
+      {
+        "deleteRole": "Delete a custom role."
+      },
+      {
+        "updateMembers": "Add or remove users from a custom role (equivalent to <code>updateCustomRole</code> on team members)."
+      }
+    ]
+  },
+  {
+    "name": "Project",
+    "path": "proj/*",
+    "desc": "<code>proj</code> is a <strong>top-level resource</strong>.",
+    "actions": [
+      {
+        "createProject": "Create a new project."
+      },
+      {
+        "deleteProject": "Delete a project."
+      },
+      {
+        "updateProjectName": "Rename a project."
+      },
+      {
+        "updateTags": "Update tags associated with a project."
+      },
+      {
+        "updateIncludeInSnippetByDefault": "Make new flags available to the client-side (JavaScript) SDK by default."
+      },
+      {
+        "updateDefaultClientSideAvailability": "Change whether new feature flags are made available to client-side SDKs."
+      },
+      {
+        "viewProject": "View a project. If set to <code>deny</code>, anyone impacted by this policy can neither view nor modify a\n        project."
+      }
+    ]
+  },
+  {
+    "name": "Environments",
+    "path": "proj/*:env/*",
+    "desc": "<code>env</code> is a child resource of <strong>projects</strong>.",
+    "actions": [
+      {
+        "createEnvironment": "Create new environments."
+      },
+      {
+        "deleteEnvironment": "Delete an existing environment."
+      },
+      {
+        "updateName": "Change the name of an environment."
+      },
+      {
+        "updateColor": "Change the color swatch for an environment."
+      },
+      {
+        "updateTtl": "Change the TTL for an environment."
+      },
+      {
+        "updateApiKey": "Reset the API key for an environment."
+      },
+      {
+        "updateMobileKey": "Reset the mobile key for an environment."
+      },
+      {
+        "updateSecureMode": "Turn secure mode on or off for an environment."
+      },
+      {
+        "updateDefaultTrackEvents": "Turn on sending detailed information for new flags by default."
+      },
+      {
+        "updateTags": "Update tags associated with an environment."
+      },
+      {
+        "updateRequireComments": "Require comments for changes to flags and segments."
+      },
+      {
+        "updateConfirmChanges": "Require environment confirmation for changes to flags and segments."
+      }
+    ]
+  },
+  {
+    "name": "Metrics",
+    "path": "proj/*:metric/*",
+    "desc": "Goals have been redesigned as metrics and associated with our Experimentation add-on. You do not need to update your\nactions to use <code>metric</code>, however. If you are using goals actions, they will still work.",
+    "actions": [
+      {
+        "createMetric": "Create metrics."
+      },
+      {
+        "deleteMetric": "Delete metrics."
+      },
+      {
+        "updateEventKey": "Change the event key for a custom metric."
+      },
+      {
+        "updateName": "Update metric's names."
+      },
+      {
+        "updateDescription": "Update metric's descriptions."
+      },
+      {
+        "updateUrls": "Update the URLs for a click or page view metric."
+      },
+      {
+        "updateSelector": "Update the CSS selector for a click metric."
+      },
+      {
+        "updateOn": "Mark a metric as active or inactive."
+      },
+      {
+        "updateTags": "Change the tags associated with a metric."
+      },
+      {
+        "updateNumeric": "Mark a custom metric as numeric or non-numeric."
+      },
+      {
+        "updateNumericUnit": "Update the unit displayed in results for a numeric custom metric."
+      },
+      {
+        "updateNumericSuccess": "Update the success criteria for a numeric custom metric."
+      },
+      {
+        "updateMaintainer": "Change the metric's maintainer."
+      }
+    ]
+  },
+  {
+    "name": "Feature flags",
+    "path": "proj/*:env/*:flag/*",
+    "desc": "<code>flag</code> is a child of <strong>both a project and environments</strong>.",
+    "actions": [
+      {
+        "createFlag": "Create a feature flag. Creating a feature flag impacts all environments in a project, so users will need\n        permission to create flags in all environments."
+      },
+      {
+        "cloneFlag": "Create a new flag with settings based on an existing flag. To clone a flag, you need to have the{' '}\n        <code>cloneFlag</code> permission on the source flag, as well as the <code>createFlag</code> permission for the\n        new flag"
+      },
+      {
+        "deleteFlag": "Delete a feature. Deleting a feature impacts all environments in a project, so users will need permission to\n        delete features in all environments."
+      },
+      {
+        "updateOn": "Toggle a feature off"
+      },
+      {
+        "updateIncludeInSnippet": "Change whether the feature flag is available to front-end code with the{' '}\n        <a href=\"/sdk/client-side/javascript\">JavaScript SDK</a>. Impacts all environments in a project."
+      },
+      {
+        "updateName": "Change the name of a feature flag. Impacts all environments in a project."
+      },
+      {
+        "updateDescription": "Change the description of a feature flag. Impacts all environments in a project."
+      },
+      {
+        "updateClientSideFlagAvailability": "Change whether the feature flag is available to client-side SDKs."
+      },
+      {
+        "updateTemporary": "Marks a flag temporary or permanent. Impacts all environments in a project."
+      },
+      {
+        "updateTags": "Update tags associated with a flag. Impacts all environments in a project."
+      },
+      {
+        "updatePrerequisites": "Update flag prerequisites."
+      },
+      {
+        "updateTargets": "Update individual user targeting rules."
+      },
+      {
+        "updateRules": "Update custom targeting rules."
+      },
+      {
+        "updateFallthrough": "Update the \"default\" or \"fallthrough\" rule."
+      },
+      {
+        "updateOffVariation": "Update the variation returned when flag toggle is set to `off`."
+      },
+      {
+        "updateMaintainer": "Update the flag maintainer. Impacts all environments."
+      },
+      {
+        "updateFlagVariations": "Change the flag's variations. Impacts all environments."
+      },
+      {
+        "updateFlagDefaultVariations": "Change the default flag variations used by newly created environments for a feature flag."
+      },
+      {
+        "updateAttachedMetrics": "Update metrics connected to a flag (start or pause an experiment)."
+      },
+      {
+        "updateFlagCustomProperties": "Update custom properties attached to a flag. Impacts all environments."
+      },
+      {
+        "createExperiment": "Create an experiment."
+      },
+      {
+        "deleteExperiment": "Delete an experiment."
+      },
+      {
+        "deleteExperimentResults": "Delete experiment results."
+      },
+      {
+        "updateExperimentActive": "Start or stop an experiment in an environment."
+      },
+      {
+        "updateExperimentBaseline": "Change a flag's baseline variation for experiments."
+      },
+      {
+        "updateAttachedGoals": "Start or stop an A/B testing experiment."
+      },
+      {
+        "deleteFlagAttachedGoalResults": "Reset the experiment results for a flag in a given environment."
+      },
+      {
+        "copyFlagConfigFrom": "Copy settings from a feature flag."
+      },
+      {
+        "copyFlagConfigTo": "Copy settings to a feature flag."
+      },
+      {
+        "updateFlagSalt": "Update a feature flag's salt."
+      },
+      {
+        "updateTrackEvents": "Change whether to send detailed event information for a flag in a given environment."
+      },
+      {
+        "updateFlagFallthroughTrackEvents": "Change whether to send detailed event information for a flag in a given environment when the fallthrough variation was selected."
+      },
+      {
+        "updateGlobalArchived": "Change whether a flag is archived."
+      },
+      {
+        "updateExpiringRules": "Change a flag's expiring custom targeting rules."
+      },
+      {
+        "updateExpiringTargets": "Change a flag's expiring individual user targeting rules."
+      },
+      {
+        "updateFeatureWorkflows": "Change a flag's feature workflows."
+      },
+      {
+        "updateScheduledChanges": "Change the scheduled updates on a feature flag."
+      },
+      {
+        "updateTriggers": "Manage trigger configurations."
+      },
+      {
+        "updateTriggers": "Create a new trigger, edit existing flag triggers, or delete an existing trigger."
+      },
+      {
+        "createApprovalRequest": "Create an approval request for a flag."
+      },
+      {
+        "updateApprovalRequest": "Update an existing approval request for a flag."
+      },
+      {
+        "deleteApprovalRequest": "Delete an approval request for a flag."
+      },
+      {
+        "reviewApprovalRequest": "Review an approval request for a flag."
+      },
+      {
+        "applyApprovalRequest": "Apply an approved approval request for a flag."
+      }
+    ]
+  },
+  {
+    "name": "Segments",
+    "path": "proj/*:env/*:segment/*",
+    "desc": "<code>segment</code> is a child of <strong>both a project and environments</strong>.",
+    "actions": [
+      {
+        "createSegment": "Create new segments."
+      },
+      {
+        "deleteSegment": "Delete segments."
+      },
+      {
+        "updateName": "Rename a segment."
+      },
+      {
+        "updateDescription": "Update a segment's description."
+      },
+      {
+        "updateTags": "Change the tags associated with a segment."
+      },
+      {
+        "updateIncluded": "Change a segment's included users."
+      },
+      {
+        "updateExcluded": "Change a segment's excluded users."
+      },
+      {
+        "updateRules": "Change a segment's custom targeting rules."
+      },
+      {
+        "updateExpiringRules": "Change a segment's expiring custom targeting rules."
+      },
+      {
+        "updateExpiringTargets": "Change a segment's expiring individual user targeting rules."
+      },
+      {
+        "updateScheduledChanges": "Change the scheduled updates on a segment."
+      }
+    ]
+  },
+  {
+    "name": "Webhooks",
+    "path": "webhook/*",
+    "desc": "<code>webhook</code> is a <strong>top-level resource</strong>.",
+    "actions": [
+      {
+        "createWebhook": "Create new webhooks."
+      },
+      {
+        "deleteWebhook": "Delete existing webhooks."
+      },
+      {
+        "updateName": "Change the name of webhook configurations."
+      },
+      {
+        "updateUrl": "Change the URL for a webhook."
+      },
+      {
+        "updateSecret": "Modify an existing webhook's signing secret."
+      },
+      {
+        "updateStatements": "Modify webhook policy statements."
+      },
+      {
+        "updateOn": "Enable and disabled existing webhooks."
+      }
+    ]
+  },
+  {
+    "name": "Integrations",
+    "path": "integration/*",
+    "desc": "Most third-party integrations use a shared set of custom role actions.",
+    "actions": [
+      {
+        "createIntegration": "Create and configure new third-party integrations."
+      },
+      {
+        "deleteIntegration": "Delete existing third-party integrations."
+      },
+      {
+        "updateName": "Change the name of third-party integration configurations."
+      },
+      {
+        "updateConfiguration": "Modify existing third-party integration configurations."
+      },
+      {
+        "updateOn": "Enable and disabled existing third-party integrations."
+      }
+    ]
+  },
+  {
+    "name": "Relay Proxy automatic configuration",
+    "path": "relay-proxy-config/*",
+    "desc": "<code>relay-proxy-config</code> is a top-level resource for which you can allow or deny certain actions.",
+    "actions": [
+      {
+        "createRelayAutoConfiguration": "Create a Relay Proxy with automatic configuration enabled"
+      },
+      {
+        "updateRelayAutoConfigurationName": "Change the Relay Proxy with automatic configuration's name"
+      },
+      {
+        "updateRelayAutoConfigurationPolicy": "Change the policies associated with the Relay Proxy with automatic configuration"
+      },
+      {
+        "deleteRelayAutoConfiguration": "Delete the Relay Proxy with automatic configuration enabled"
+      },
+      {
+        "resetRelayAutoConfiguration": "Resets the configuration of the Relay Proxy with automatic configuration enabled"
+      }
+    ]
+  },
+  {
+    "name": "Destinations",
+    "path": "proj/*:env/*:destination/*",
+    "desc": "<code>destination</code> is a child of <strong>both a project and environments</strong>.",
+    "actions": [
+      {
+        "createDestination": "Create a new data export destination."
+      },
+      {
+        "deleteDestination": "Delete a data export destination."
+      },
+      {
+        "updateConfiguration": "Change a data export destination."
+      },
+      {
+        "updateOn": "Flip the on/off status of a data export destination."
+      },
+      {
+        "updateName": "Rename a data export destination."
+      }
+    ]
+  },
+  {
+    "name": "Code references",
+    "path": "code-reference-repository/*",
+    "desc": "<code>code-reference-repository</code> is a <strong>top-level resource</strong>.",
+    "actions": [
+      {
+        "createCodeRefsRepository": "Connect a Git repository."
+      },
+      {
+        "updateCodeRefsRepositoryName": "Update a Git repository connection name."
+      },
+      {
+        "updateCodeRefsRepositoryConfiguration": "Update a Git repository connection configuration."
+      },
+      {
+        "UpdateCodeRefsRepositoryOn": "Flip the on/off status of a Git repository connection."
+      },
+      {
+        "updateCodeRefsRepositoryBranches": "Update the stored branch data for a Git repository connection."
+      },
+      {
+        "deleteCodeRefsRepository": "Delete a Git repository connection."
+      }
+    ]
+  },
+  {
+    "name": "Users",
+    "path": "proj/*:env/*:user/*",
+    "desc": "<code>user</code> is a child of <strong>both a project and environments</strong>.",
+    "actions": [
+      {
+        "deleteUser": "Delete a user."
+      }
+    ]
+  }
+]

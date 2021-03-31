@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Projs",
+    "type": "proj",
+    "path": "proj/*",
+    "doc": "Top-level resource. Projects have no parent resource. Write it as proj/*."
+  },
+  {
+    "name": "Environments",
+    "type": "env",
+    "path": "proj/*:env/*",
+    "doc": "A child resources of projects. Write it as proj/*:env/*."
+  },
+  {
+    "name": "Metrics",
+    "type": "metric",
+    "path": "proj/*:metric/*",
+    "doc": "metric is a child resource of projects. Write it as proj/*:metric/*"
+  },
+  {
+    "name": "Members",
+    "type": "member",
+    "path": "member/*",
+    "doc": "member is a top-level resource. Write it as member/*"
+  },
+  {
+    "name": "Service Tokens",
+    "type": "service-token",
+    "path": "service-token/*",
+    "doc": "service-token is a top-level resource. Write it as service-token/*."
+  },
+  {
+    "name": "Tokens",
+    "type": "token",
+    "path": "member/*:token/*",
+    "doc": "token is a child resource of members. Write it as member/*:token/*."
+  },
+  {
+    "name": "Roles",
+    "type": "role",
+    "path": "role/*",
+    "doc": "role is a top-level resource. Write it as role/*"
+  },
+  {
+    "name": "Flags",
+    "type": "flag",
+    "path": "proj/*:env/*:flag/*",
+    "doc": "flag is a child of both a project and environments. Write it as proj/*:env/*:flag/*"
+  },
+  {
+    "name": "Segments",
+    "type": "segment",
+    "path": "proj/*:env/*:segment/*",
+    "doc": "segment is a child of both a project and environments. Write it as proj/*:env/*:segment/*"
+  },
+  {
+    "name": "Integrations",
+    "type": "integration",
+    "path": "integration/*",
+    "doc": "integration is a top-level resource. Write it as integration/*"
+  },
+  {
+    "name": "Relay Proxy Configs",
+    "type": "relay-proxy-config",
+    "path": "relay-proxy-config/*",
+    "doc": "relay-proxy-config is a top-level resource. Write it as relay-proxy-config/*"
+  },
+  {
+    "name": "Webhooks",
+    "type": "webhook",
+    "path": "webhook/*",
+    "doc": "webhook is a top-level resource. Write it as webhook/*"
+  },
+  {
+    "name": "Users",
+    "type": "user",
+    "path": "proj/*:env/*:user/*",
+    "doc": "user is a child of both a project and environments. Write it as proj/*:env/*:user/*"
+  },
+  {
+    "name": "Code-reference-repositorys",
+    "type": "code-reference-repository",
+    "path": "code-reference-repository/*",
+    "doc": "code-reference-repository is a top-level resource. Write it as code-reference-repository/*"
+  },
+  {
+    "name": "Destinations",
+    "type": "destination",
+    "path": "proj/*:env/*:destination/*",
+    "doc": "destination is a child of both a project and environments. Write it as proj/*:env/*:destination/*."
+  },
+  {
+    "name": "Account",
+    "type": "acct",
+    "path": "acct",
+    "doc": "acct is a unique resource specifier representing modifications to your account itself, such as managing"
+  }
+]
